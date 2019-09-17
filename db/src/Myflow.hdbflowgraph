@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<flowgraph:ContainerNode xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:flowgraph="http://www.sap.com/ndb/flowgraph/1.0" xmi:id="b16484c7a5b7b12b7a805e6ce67dc56e" name="Myflow" runtimeBehavior="BATCH_TASK">
+  <annotations key="sap.afm.layout" xmi:id="4ecca9f0e3fc215bd386d5481c3a6651">
+    <annotations xmi:id="7e5ed25d5c429a3d9c36c134935af97a" key="x" value="10">
+    </annotations>
+    <annotations xmi:id="52d344a0b3b0a4e444c011435f1a02b9" key="y" value="10">
+    </annotations>
+    <annotations xmi:id="8fa891da0a7e9e94a31c711ebbac993e" key="width" value="100">
+    </annotations>
+    <annotations xmi:id="346fa544bda4a5580f5a822e88f6fa69" key="height" value="84">
+    </annotations>
+  </annotations>
+  <annotations xmi:id="8b14a9836797f0790728d69363e55eba" key="sap.afm.palette">
+    <annotations xmi:id="d1b0cc8e8ce6c683b3301f118de3f64d" key="additions" value="">
+    </annotations>
+  </annotations>
+  <annotations xmi:id="fd4f6e86764d32ceb8d2c284c73c93ab" key="sap.afm.nodeType" value="ContainerNode">
+  </annotations>
+  <annotations xmi:id="b56d23f82e3d5c3b86caedde850ce350" key="sap.afm.nodeInputs">
+  </annotations>
+  <annotations xmi:id="66195904c441d51c16dbd4c7b9573e3d" key="sap.afm.nodeOutputs">
+  </annotations>
+  <tableMappings xmi:id="302f47c783f301accb5b07ddec5f6893" source="878a8a7127dacb391474b9252a4699dd" target="02ee3d1b761bbc6db1ee1e0e64678dd0">
+    <attributeMappings xmi:id="0a60c239c6af21f7eb3120b069aedb9f" source="d369957eb68ea7cbc237247eda0a2c59" target="45d84e6f08dccf45cb411eeb2d521b51">
+    </attributeMappings>
+  </tableMappings>
+  <nodes xmi:id="eae14ac41028bd03cc4256f58f9388f3" xsi:type="flowgraph:DateGenerationNode" name="DateGen" startDate="2019.09.01" endDate="2019.09.30" increment="DAILY">
+    <annotations key="sap.afm.layout" xmi:id="1024f3cf479f19ad6757878981015e8f">
+      <annotations xmi:id="73cacb72642f4719a634c680e65fc39c" key="x" value="48">
+      </annotations>
+      <annotations xmi:id="808d50cf53d2dd7990d0d4cc7a2e5663" key="y" value="90">
+      </annotations>
+      <annotations xmi:id="8ec5857caf029d7b0bc09f91a12c1d04" key="width" value="120">
+      </annotations>
+      <annotations xmi:id="57fc5d490d7b2e0fb7364ed164771970" key="height" value="115">
+      </annotations>
+    </annotations>
+    <outputs xmi:id="878a8a7127dacb391474b9252a4699dd" name="DateGen_OUT">
+      <attributes xmi:id="d369957eb68ea7cbc237247eda0a2c59" name="GENERATED_TIMESTAMP" type="DATE" nullable="false">
+      </attributes>
+    </outputs>
+  </nodes>
+  <nodes xmi:id="e23859dd8b7f201454cd45126ae0303f" xsi:type="flowgraph:DataNode" name="DataTarget" truncateTable="true" catalogObjectName="DataTarget_SDIJOB" type="TEMPLATE_TABLE">
+    <annotations key="sap.afm.layout" xmi:id="86e8508907ee4c74618b410517715907">
+      <annotations xmi:id="fb5d930eeb287b3b277f9aeb3c8e5b2e" key="x" value="250">
+      </annotations>
+      <annotations xmi:id="a03a6420286c833433583ad88fdc0577" key="y" value="90">
+      </annotations>
+      <annotations xmi:id="0ccc87367d39571b2f6545700a29b036" key="width" value="120">
+      </annotations>
+      <annotations xmi:id="4142ddd00affc10823d9f2b995a406b6" key="height" value="115">
+      </annotations>
+    </annotations>
+    <annotations xmi:id="ea0c3ca192e1a6ee80e6148cecea44cd" key="sap.afm.description">
+    </annotations>
+    <annotations xmi:id="14cd3ea9d1cbfba9964257a920c931ca" key="sap.afm.nodeType" value="DataNode">
+    </annotations>
+    <annotations xmi:id="d88f299716bcb74905e3b227ebf6f7e0" key="sap.afm.nodeInputs">
+    </annotations>
+    <annotations xmi:id="32abeb2b3ee0d4344cbafa42eeda041d" key="sap.afm.nodeOutputs">
+    </annotations>
+    <annotations xmi:id="648682dc82fd1afa9e4809be5974849b" key="sap.afm.displayName" value="Data Target">
+    </annotations>
+    <inputs xmi:id="02ee3d1b761bbc6db1ee1e0e64678dd0" name="DataTarget" kind="TABLE">
+      <attributes xmi:id="45d84e6f08dccf45cb411eeb2d521b51" name="GENERATED_TIMESTAMP" type="DATE" nullable="false">
+      </attributes>
+    </inputs>
+  </nodes>
+</flowgraph:ContainerNode>
