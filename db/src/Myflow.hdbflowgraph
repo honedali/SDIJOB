@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<flowgraph:ContainerNode xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:flowgraph="http://www.sap.com/ndb/flowgraph/1.0" xmi:id="b16484c7a5b7b12b7a805e6ce67dc56e" name="Myflow" runtimeBehavior="BATCH_TASK">
+<flowgraph:ContainerNode xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:flowgraph="http://www.sap.com/ndb/flowgraph/1.0" xmi:version="2.0" xmi:id="b16484c7a5b7b12b7a805e6ce67dc56e" name="Myflow" runtimeBehavior="BATCH_TASK">
   <annotations key="sap.afm.layout" xmi:id="4ecca9f0e3fc215bd386d5481c3a6651">
     <annotations xmi:id="7e5ed25d5c429a3d9c36c134935af97a" key="x" value="10">
     </annotations>
@@ -11,8 +11,7 @@
     </annotations>
   </annotations>
   <annotations xmi:id="8b14a9836797f0790728d69363e55eba" key="sap.afm.palette">
-    <annotations xmi:id="d1b0cc8e8ce6c683b3301f118de3f64d" key="additions" value="">
-    </annotations>
+    <annotations xmi:id="d1b0cc8e8ce6c683b3301f118de3f64d" key="additions" value=""/>
   </annotations>
   <annotations xmi:id="fd4f6e86764d32ceb8d2c284c73c93ab" key="sap.afm.nodeType" value="ContainerNode">
   </annotations>
@@ -20,13 +19,19 @@
   </annotations>
   <annotations xmi:id="66195904c441d51c16dbd4c7b9573e3d" key="sap.afm.nodeOutputs">
   </annotations>
-  <tableMappings xmi:id="302f47c783f301accb5b07ddec5f6893" source="878a8a7127dacb391474b9252a4699dd" target="02ee3d1b761bbc6db1ee1e0e64678dd0">
-    <attributeMappings xmi:id="0a60c239c6af21f7eb3120b069aedb9f" source="d369957eb68ea7cbc237247eda0a2c59" target="45d84e6f08dccf45cb411eeb2d521b51">
+  <tableMappings xmi:id="0bc67a54fb6c3ec4ca3da8018a8d3865" source="878a8a7127dacb391474b9252a4699dd" target="7914981265f9246887e1d7eb8286388c">
+    <attributeMappings xmi:id="cf957e995916b746987137ede70e7192" source="d369957eb68ea7cbc237247eda0a2c59" target="d23ecb8ea93d32d80fcdd31da26a8d36">
+    </attributeMappings>
+  </tableMappings>
+  <tableMappings xmi:id="b8c1c0c5be8edef3b870347306f8418d" source="0c80383ae63668a4d49da535b5204648" target="02ee3d1b761bbc6db1ee1e0e64678dd0">
+    <attributeMappings xmi:id="f8c7898429192817366a4fff9c1ad46f" source="595fe22be24d6a68373c6d71efe85562" target="45d84e6f08dccf45cb411eeb2d521b51">
+    </attributeMappings>
+    <attributeMappings xmi:id="2991ec26781799984a8dc2defc03f3fc" source="7de4dd82f1120707055300d650d10139" target="0e340e3d1850b95c0b443e86ba69e6b8">
     </attributeMappings>
   </tableMappings>
   <nodes xmi:id="eae14ac41028bd03cc4256f58f9388f3" xsi:type="flowgraph:DateGenerationNode" name="DateGen" startDate="2019.09.01" endDate="2019.09.30" increment="DAILY">
     <annotations key="sap.afm.layout" xmi:id="1024f3cf479f19ad6757878981015e8f">
-      <annotations xmi:id="73cacb72642f4719a634c680e65fc39c" key="x" value="48">
+      <annotations xmi:id="73cacb72642f4719a634c680e65fc39c" key="x" value="-113">
       </annotations>
       <annotations xmi:id="808d50cf53d2dd7990d0d4cc7a2e5663" key="y" value="90">
       </annotations>
@@ -63,7 +68,33 @@
     </annotations>
     <inputs xmi:id="02ee3d1b761bbc6db1ee1e0e64678dd0" name="DataTarget" kind="TABLE">
       <attributes xmi:id="45d84e6f08dccf45cb411eeb2d521b51" name="GENERATED_TIMESTAMP" type="DATE" nullable="false">
+        <annotations xmi:id="1f61bb3e3a3f610c389ad027c2ae3b82" key="sap.im.primaryKey" value="false">
+        </annotations>
+      </attributes>
+      <attributes xmi:id="0e340e3d1850b95c0b443e86ba69e6b8" name="DAYOFMONTH" type="INTEGER" nullable="true">
       </attributes>
     </inputs>
+  </nodes>
+  <nodes xmi:id="1464bc42adb9fa2b203f97d0ed570951" xsi:type="flowgraph:FilterNode" name="Projection" outputDistinctRows="true">
+    <annotations key="sap.afm.layout" xmi:id="8d068b04e020110deb60c5d4daafdcf3">
+      <annotations xmi:id="e361931667e0e6906347712b4cc0026c" key="x" value="46">
+      </annotations>
+      <annotations xmi:id="09033139097866946e5f65b84b673892" key="y" value="90">
+      </annotations>
+      <annotations xmi:id="e10b3479a85de62796ccc572ba8939b0" key="width" value="120">
+      </annotations>
+      <annotations xmi:id="a98595f5f7f59982d8c74ab444d7ac44" key="height" value="115">
+      </annotations>
+    </annotations>
+    <inputs xmi:id="7914981265f9246887e1d7eb8286388c" name="Projection_IN">
+      <attributes xmi:id="d23ecb8ea93d32d80fcdd31da26a8d36" name="GENERATED_TIMESTAMP" type="DATE" nullable="false">
+      </attributes>
+    </inputs>
+    <outputs xmi:id="0c80383ae63668a4d49da535b5204648" name="Projection_OUT">
+      <attributes xmi:id="595fe22be24d6a68373c6d71efe85562" name="GENERATED_TIMESTAMP" type="DATE" nullable="false" expression="&quot;GENERATED_TIMESTAMP&quot;">
+      </attributes>
+      <attributes xmi:id="7de4dd82f1120707055300d650d10139" name="DAYOFMONTH" type="INTEGER" nullable="true" expression="DAYOFMONTH(&quot;GENERATED_TIMESTAMP&quot;)">
+      </attributes>
+    </outputs>
   </nodes>
 </flowgraph:ContainerNode>
